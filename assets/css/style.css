@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    background: rgb(107, 129, 255);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wheel {
+    width: 300px; /* Можно задать любую ширину и дети сами подстроятся под круг. Обновите страницу при изменении*/
+    aspect-ratio: 1 / 1;
+    border: 3px solid white;
+    border-radius: 50%;
+    position: relative;
+    .wheel__inner {
+        position: absolute;
+        width: 0;
+        left: 50%;
+        bottom: 50%;
+        transform-origin: bottom right;
+        .wheel__content {
+
+            width: calc(300px / 8); /* Можно задать любую ширину и дети сами подстроятся под круг. Обновите страницу при изменении*/
+            position: absolute;
+
+            aspect-ratio: 1 / 1;
+            background: white;
+            border-radius: 50%;
+            border: black 3px solid;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.5em;
+            left: 50%;
+            top: 50%;
+        }
+    }
+}
